@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- ERROR 1: Root element is NationalPark instead of NationalParks -->
 <NationalPark xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:noNamespaceSchemaLocation="https://github.com/179WestASU/CSE467/blob/main/NationalParks.xsd">
+              xsi:noNamespaceSchemaLocation="https://github.com/179WestASU/CSE467/blob/5db419189911015b1adc7fbcca6067c64488d9d7/NationalParks.xsd">
 
   <!-- Park 1: Grand Canyon -->
   <NationalPark Rating="4.9">
