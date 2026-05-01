@@ -6,22 +6,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="First National Collegiate Bank of AZ - Accessible banking for everyone. Built by neurodivergent students for financial literacy.">
-    <title>First National Collegiate Bank of AZ - Accessible Banking for Everyone</title>
+    <meta name="description" content="First National Collegiate Bank of AZ - Accessible banking built by neurodivergent students for financial literacy.">
+    <title>First National Collegiate Bank of AZ</title>
     <style>
-        /* === ACCESSIBILITY-FIRST + BISEXUAL PRIDE + KC ROYALS === */
         :root {
-            --pink: #D60270;
-            --purple: #9B4F96;
-            --bi-blue: #0038A8;
-            --royals-blue: #004687;
-            --powder-blue: #7AB2DD;
-            --gold: #BD9B60;
+            --coral: #E85D75;
+            --mauve: #A67C9F;
+            --slate: #3D5A80;
+            --royals: #004687;
+            --sky: #7AB2DD;
+            --cream: #F8F5F2;
             --white: #FFFFFF;
-            --off-white: #F8F9FA;
-            --dark: #212529;
-            --gradient-pride: linear-gradient(135deg, var(--pink) 0%, var(--purple) 50%, var(--royals-blue) 100%);
-            --gradient-light: linear-gradient(135deg, var(--powder-blue) 0%, var(--bi-blue) 100%);
+            --charcoal: #2B2D42;
+            --soft-gradient: linear-gradient(135deg, #E85D75 0%, #A67C9F 50%, #3D5A80 100%);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,11 +27,11 @@
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--pink);
+            background: var(--slate);
             color: var(--white);
             padding: 8px 16px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             z-index: 100;
         }
         .skip-link:focus { top: 0; }
@@ -42,225 +39,233 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background: var(--gradient-pride);
+            color: var(--charcoal);
+            background: var(--soft-gradient);
             min-height: 100vh;
             background-attachment: fixed;
         }
         
-        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 20px; }
         
         header {
             background: var(--white);
             padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             margin-bottom: 30px;
             text-align: center;
-            border: 4px solid var(--purple);
+            border-top: 5px solid var(--mauve);
         }
         
         h1 {
-            background: var(--gradient-pride);
+            background: linear-gradient(to right, var(--coral), var(--mauve), var(--slate));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-size: clamp(1.8rem, 5vw, 3.5rem);
-            font-weight: 900;
-            margin-bottom: 16px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
         
         .tagline {
-            color: var(--royals-blue);
-            font-size: clamp(1rem, 3vw, 1.4rem);
-            font-weight: 600;
-            margin-bottom: 12px;
+            color: var(--royals);
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            font-weight: 500;
+            margin-bottom: 8px;
         }
         
         .mission {
-            color: var(--purple);
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            font-weight: 500;
+            color: var(--slate);
+            font-size: 1rem;
+            font-weight: 400;
+            font-style: italic;
         }
         
         .content {
             background: var(--white);
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            border: 4px solid var(--powder-blue);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .section { margin-bottom: 50px; }
+        .section { margin-bottom: 45px; }
         
         h2 {
-            color: var(--royals-blue);
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 4px solid var(--purple);
-            font-weight: 800;
+            color: var(--royals);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--mauve);
+            font-weight: 700;
         }
         
-        .alert {
-            background: linear-gradient(135deg, var(--pink), var(--purple));
-            color: var(--white);
-            padding: 24px;
+        .note {
+            background: linear-gradient(135deg, var(--cream), var(--white));
+            color: var(--charcoal);
+            padding: 20px;
             border-radius: 12px;
-            margin: 30px 0;
-            font-size: 1.1rem;
-            border: 3px solid var(--royals-blue);
-            box-shadow: 0 8px 24px rgba(214, 2, 112, 0.3);
+            margin: 25px 0;
+            border-left: 4px solid var(--coral);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
         
         .links {
             display: flex;
-            gap: 20px;
-            margin: 30px 0;
+            gap: 16px;
+            margin: 25px 0;
             flex-wrap: wrap;
             justify-content: center;
         }
         
         .btn {
-            padding: 18px 36px;
-            background: var(--gradient-pride);
+            padding: 14px 32px;
+            background: var(--royals);
             color: var(--white);
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-            box-shadow: 0 8px 24px rgba(0, 70, 135, 0.3);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
         }
         
         .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 70, 135, 0.4);
-            border-color: var(--gold);
+            background: var(--slate);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 70, 135, 0.25);
         }
         
         .btn:focus {
-            outline: 4px solid var(--gold);
-            outline-offset: 4px;
+            outline: 3px solid var(--coral);
+            outline-offset: 3px;
         }
         
-        .btn-secondary { background: var(--royals-blue); }
-        .btn-tertiary { background: var(--purple); }
+        .btn-alt {
+            background: linear-gradient(135deg, var(--mauve), var(--slate));
+        }
+        
+        .btn-alt:hover {
+            background: linear-gradient(135deg, var(--coral), var(--mauve));
+        }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
         }
         
         .feature-card {
-            background: linear-gradient(135deg, var(--off-white), var(--white));
-            padding: 28px;
+            background: var(--cream);
+            padding: 24px;
             border-radius: 12px;
-            border-left: 6px solid var(--pink);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            border-left: 4px solid var(--coral);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.2s ease;
         }
         
-        .feature-card:nth-child(2) { border-left-color: var(--purple); }
-        .feature-card:nth-child(3) { border-left-color: var(--royals-blue); }
-        .feature-card:nth-child(4) { border-left-color: var(--powder-blue); }
-        .feature-card:nth-child(5) { border-left-color: var(--bi-blue); }
-        .feature-card:nth-child(6) { border-left-color: var(--gold); }
+        .feature-card:nth-child(2) { border-left-color: var(--mauve); }
+        .feature-card:nth-child(3) { border-left-color: var(--slate); }
+        .feature-card:nth-child(4) { border-left-color: var(--royals); }
+        .feature-card:nth-child(5) { border-left-color: var(--sky); }
+        .feature-card:nth-child(6) { border-left-color: var(--coral); }
         
         .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
         }
         
         .feature-card h3 {
-            color: var(--royals-blue);
-            margin-bottom: 12px;
-            font-size: 1.4rem;
-            font-weight: 800;
+            color: var(--royals);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         .security-badges {
-            margin: 24px 0;
+            margin: 20px 0;
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
         
         .security-badge {
-            background: var(--royals-blue);
+            background: var(--slate);
             color: var(--white);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            border: 2px solid var(--purple);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
             transition: all 0.2s ease;
         }
         
         .security-badge:hover {
-            background: var(--purple);
-            border-color: var(--pink);
-            transform: scale(1.05);
+            background: var(--mauve);
         }
         
-        ul { margin-left: 24px; line-height: 2.2; }
-        li { font-size: 1.05rem; margin-bottom: 8px; }
-        li strong { color: var(--royals-blue); font-weight: 800; }
+        ul { margin-left: 20px; line-height: 2; }
+        li { font-size: 1rem; margin-bottom: 6px; }
+        li strong { color: var(--royals); font-weight: 700; }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin: 25px 0;
         }
         
         .stat-card {
-            background: var(--gradient-light);
-            padding: 32px;
+            background: linear-gradient(135deg, var(--sky), var(--royals));
+            padding: 28px;
             border-radius: 12px;
             text-align: center;
-            border: 3px solid var(--white);
-            box-shadow: 0 8px 24px rgba(0, 70, 135, 0.2);
+            box-shadow: 0 6px 16px rgba(0, 70, 135, 0.2);
         }
         
         .stat-card h3 {
             color: var(--white);
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 8px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 6px;
         }
         
         .stat-card p {
             color: var(--white);
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-size: 1rem;
+            font-weight: 600;
         }
         
         .footer {
             text-align: center;
             color: var(--white);
-            margin-top: 50px;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+            padding: 35px;
+            background: rgba(0, 0, 0, 0.15);
             border-radius: 16px;
-            border: 3px solid var(--powder-blue);
+            backdrop-filter: blur(10px);
         }
         
         .footer p {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
         
-        a { color: var(--royals-blue); font-weight: 700; text-decoration: underline; }
-        a:hover { color: var(--pink); }
-        a:focus { outline: 3px solid var(--gold); outline-offset: 2px; }
+        .footer em {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        a { color: var(--royals); font-weight: 600; }
+        a:hover { color: var(--mauve); }
+        a:focus { outline: 2px solid var(--coral); outline-offset: 2px; }
         
         @media (max-width: 768px) {
             .container { padding: 12px; }
@@ -281,86 +286,86 @@
     <div class="container">
         <header role="banner">
             <h1>First National Collegiate Bank of AZ</h1>
-            <p class="tagline">Accessible Banking for Everyone</p>
-            <p class="mission"><strong>Built by neurodivergent students for financial literacy education</strong></p>
+            <p class="tagline">Banking Built for Everyone</p>
+            <p class="mission">Created by neurodivergent students, designed for financial literacy</p>
         </header>
 
         <main id="main-content" class="content" role="main">
-            <div class="alert" role="alert">
-                <strong>About This Project:</strong> Full-featured banking application deployed as Docker container. Complete source code and documentation in GitHub repository.
+            <div class="note">
+                <strong>About This Project:</strong> A complete banking platform with production-ready security and accessibility. Full source code and technical documentation available in our GitHub repository.
             </div>
 
             <section class="section">
                 <h2>Project Resources</h2>
                 <nav class="links">
-                    <a href="https://github.com/179WestASU/CSE467" class="btn">GitHub Repository</a>
-                    <a href="https://github.com/179WestASU/CSE467/blob/main/README.md" class="btn btn-secondary">Documentation</a>
-                    <a href="https://github.com/179WestASU/CSE467/blob/main/SECURITY.md" class="btn btn-tertiary">Security Details</a>
+                    <a href="https://github.com/179WestASU/CSE467" class="btn">View Repository</a>
+                    <a href="https://github.com/179WestASU/CSE467/blob/main/README.md" class="btn btn-alt">Documentation</a>
+                    <a href="https://github.com/179WestASU/CSE467/blob/main/SECURITY.md" class="btn btn-alt">Security Guide</a>
                 </nav>
             </section>
 
             <section class="section">
-                <h2>All Required Account Types</h2>
+                <h2>Account Types</h2>
                 <div class="features">
                     <article class="feature-card">
-                        <h3>Savings Account</h3>
-                        <p>High-yield savings with 4.25% APY. Perfect for emergency funds and long-term goals.</p>
+                        <h3>Savings</h3>
+                        <p>High-yield savings at 4.25% APY. Build your emergency fund with competitive returns.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Checking Account</h3>
-                        <p>Daily transactions with 0.01% APY. Debit card access and unlimited transactions.</p>
+                        <h3>Checking</h3>
+                        <p>Everyday banking at 0.01% APY. Unlimited transactions with full debit access.</p>
                     </article>
                     <article class="feature-card">
                         <h3>Certificate of Deposit</h3>
-                        <p>6 or 12-month terms with 4.75%-5.25% APY. Fixed-rate, FDIC insured.</p>
+                        <p>Fixed terms at 4.75-5.25% APY. Secure 6 or 12-month investments, FDIC insured.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Money Market Account</h3>
-                        <p>Higher interest at 4.50% APY with limited monthly transactions.</p>
+                        <h3>Money Market</h3>
+                        <p>Enhanced interest at 4.50% APY. Better returns with limited monthly transactions.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Mutual Fund Deposit</h3>
-                        <p>Investment account for mutual fund deposits and portfolio management.</p>
+                        <h3>Mutual Funds</h3>
+                        <p>Investment account for mutual fund management and portfolio growth strategies.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Cash Balance Tracking</h3>
-                        <p>Real-time aggregated balance across all accounts with detailed breakdowns.</p>
+                        <h3>Balance Tracking</h3>
+                        <p>Live aggregated view across all accounts with detailed analytics and insights.</p>
                     </article>
                 </div>
             </section>
 
             <section class="section">
-                <h2>Security Features (CVE-Compliant April 26, 2024)</h2>
-                <p><strong>Comprehensive security with all OWASP Top 10 mitigations:</strong></p>
+                <h2>Security Features</h2>
+                <p><strong>Enterprise-grade security with comprehensive CVE mitigation (April 26, 2024):</strong></p>
                 <div class="security-badges">
-                    <span class="security-badge">Argon2id</span>
-                    <span class="security-badge">JWT Auth</span>
-                    <span class="security-badge">MFA</span>
+                    <span class="security-badge">Argon2id Hashing</span>
+                    <span class="security-badge">JWT Tokens</span>
+                    <span class="security-badge">Multi-Factor Auth</span>
                     <span class="security-badge">AES-256</span>
                     <span class="security-badge">TLS 1.3</span>
                     <span class="security-badge">SQL Prevention</span>
                     <span class="security-badge">XSS Protection</span>
-                    <span class="security-badge">CSRF Tokens</span>
+                    <span class="security-badge">CSRF Defense</span>
                     <span class="security-badge">Rate Limiting</span>
-                    <span class="security-badge">RBAC</span>
+                    <span class="security-badge">Role Control</span>
                     <span class="security-badge">Audit Logs</span>
-                    <span class="security-badge">PCI-DSS</span>
+                    <span class="security-badge">PCI Compliant</span>
                 </div>
             </section>
 
             <section class="section">
-                <h2>Technology Stack</h2>
+                <h2>Technology</h2>
                 <ul>
                     <li><strong>Backend:</strong> Python 3.11, Flask 3.0.3</li>
-                    <li><strong>Database:</strong> PostgreSQL 15 with SQLAlchemy ORM</li>
-                    <li><strong>Cache:</strong> Redis 7 for rate limiting</li>
+                    <li><strong>Database:</strong> PostgreSQL 15 with SQLAlchemy</li>
+                    <li><strong>Cache:</strong> Redis 7 for performance</li>
                     <li><strong>Security:</strong> Argon2, JWT, PyOTP, Cryptography</li>
                     <li><strong>Deployment:</strong> Docker, Docker Compose, Gunicorn</li>
                 </ul>
             </section>
 
             <section class="section">
-                <h2>Project Statistics</h2>
+                <h2>Project Metrics</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>3,500+</h3>
@@ -384,27 +389,27 @@
                     </div>
                     <div class="stat-card">
                         <h3>1,500+</h3>
-                        <p>Documentation Lines</p>
+                        <p>Docs Written</p>
                     </div>
                 </div>
             </section>
 
             <section class="section">
-                <h2>Submission Details</h2>
+                <h2>Submission</h2>
                 <ul>
                     <li><strong>Course:</strong> CSE467 - Secure Software Development</li>
-                    <li><strong>Repository:</strong> <a href="https://github.com/179WestASU/CSE467">https://github.com/179WestASU/CSE467</a></li>
-                    <li><strong>Date:</strong> April 29, 2026 (Late Submission)</li>
-                    <li><strong>Status:</strong> Complete - All requirements met</li>
+                    <li><strong>Repository:</strong> <a href="https://github.com/179WestASU/CSE467">github.com/179WestASU/CSE467</a></li>
+                    <li><strong>Submitted:</strong> April 29, 2026</li>
+                    <li><strong>Status:</strong> Complete</li>
                 </ul>
             </section>
         </main>
 
         <footer class="footer" role="contentinfo">
             <p><strong>First National Collegiate Bank of AZ</strong></p>
-            <p>Built by neurodivergent students, for everyone pursuing financial literacy</p>
-            <p>&copy; 2026 - Educational Project - CSE467</p>
-            <p><em>Accessible. Inclusive. Secure.</em></p>
+            <p>Built with care by neurodivergent students</p>
+            <p>&copy; 2026 Educational Project</p>
+            <p><em>Accessible. Thoughtful. Secure.</em></p>
         </footer>
     </div>
 </body>
